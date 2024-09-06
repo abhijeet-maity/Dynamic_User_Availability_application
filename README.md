@@ -12,6 +12,8 @@ The Dynamic User Availability Application allows users to set and manage their a
 - [Prerequisites](#prerequisites)
 - [Application Architecture](#application-architecture)
 - [API Endpoints](#api-endpoints)
+- [Installation](#installation)
+- [Usage](#usage)
 
 
 ## Features
@@ -65,15 +67,54 @@ The Dynamic User Availability Application allows users to set and manage their a
 4. **App.jsx** - The entry point of our application.
 
 
-
 ## API Endpoints
-1. userAuth routes - /api/userAuth/ - End point to get list of all the users of application.
-                   - /api/userAuth/login - End point to login to our application.
-2. userAvailability routes - /api/userAvailability/ - End point for the user to book slot.
-                           - /api/userAvailability/:userId - End point to get the availability for the specific user.
-                           - /api/userAvailability/:id - End point to delete specific availability of the user.
-3. userSession routes - /api/userSession/ - End point to add selected user for the session.
-                      - /api/userSession/:userId - End point to get the sesssions of a particular user.
+ 
+- /api/userAuth/ -                End point to get list of all the users of application.
+- /api/userAuth/login -           End point to login to our application.
+- /api/userAvailability/ -        End point for the user to book slot.
+- /api/userAvailability/:userId - End point to get the availability for the specific user.
+- /api/userAvailability/:id -     End point to delete specific availability of the user.
+- /api/userSession/ -             End point to add selected user for the session.
+- /api/userSession/:userId -      End point to get the sesssions of a particular user.
 
+## Installation
 
+To set the project locally, follow these steps:
 
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/abhijeet-maity/Dynamic_User_Availability_application.git
+   cd Dynamic_User_Availability_application
+
+2. **Install frontend dependencies:**
+   ```bash
+   cd frontend
+   npm install
+
+3. **Install backend dependencies:**
+   ```bash
+   cd ..
+   cd backend
+   npm install
+
+4. **Set up environment variables:**
+   ```env
+    PORT=3000
+    MONGO_URI= your-mongodb-uri
+
+## Usage
+
+To run the application locally follow these steps:
+
+1. **Start the backend server:**
+   ```bash
+   cd backend
+   npm run dev
+
+2. **Start the frontend server:**
+   ```bash
+   cd frontend
+   npm run dev
+
+3. Open your browser and navigate to http://localhost:3001 to view the backend.
+4. Open another tab in the browser and navigate to http://localhost:5173 to view the frontend.
