@@ -15,10 +15,6 @@ const sessionSchema = new mongoose.Schema({
     endDate: { type: Date, 
         required: true 
     },
-    // attendees: [{
-    //   name: { type: String, required: true },
-    //   email: { type: String, required: true },
-    // }],
 });
 
 const userSession = mongoose.model('userSession', sessionSchema);
